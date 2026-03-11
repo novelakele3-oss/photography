@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novi Non | Official</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="background-blurs">
+        <div class="blur-red"></div> 
+        <div class="blur-white"></div>
+    </div>
+
+    <header>
+        <div class="non">
+            <nav><a href="#" id="homebtn">Home</a></nav>
+            <div class="quote-script">"I will never give up"</div>
+        </div>
+        <div class="header-right">
+            <button class="auth-btn" onclick="openOverlay('login')">LOGIN</button>
+            <button class="auth-btn" onclick="openOverlay('signup')">SIGN UP</button>
+        </div>
+    </header>
+
+    <main id="landing-page">
+        <h1>Welcome to Novi Non</h1>
+        <div class="image-wrapper">
+            <img src="gg.jpg" alt="Sample Image">
+        </div>
+    </main>
+
+    <section id="gallery" class="hidden">
+        <h2 class="gallery-title">photo is best in this world it have best memoris</h2>
+        
+        <div class="gallery-grid">
+            <div class="img-box"><img src="2.jpg" alt="Memory 1"></div>
+            <div class="img-box"><img src="11.jpg" alt="Memory 2"></div>
+            <div class="img-box"><img src="33.jpg" alt="Memory 3"></div>
+            <div class="img-box"><img src="4.jpg" alt="Memory 4"></div>
+        </div>
+
+        <h2 class="non"> Novi non studio </h2>
+        <h3 class="non1"> We are the best studio ever</h3>
+
+        <div class="contact-section">
+            <a href="tel:0900116183" class="phone-link">
+                <span> Call Me:</span> 0900116183
+            </a>
+        </div>
+    </section>
+
+    <div class="overlay-container" id="mainOverlay">
+        <div class="form-wrapper">
+            <button class="close-btn" onclick="closeOverlay()">&times;</button>
+
+            <div id="loginForm" class="auth-content">
+                <h2>Login</h2>
+                <p class="switch-text">Don't have an account? <a href="#" onclick="showSignUp()">Sign up here</a></p>
+                
+                <div id="step-email">
+                    <div class="input-group">
+                        <label>Email Address</label>
+                        <input type="email" id="loginEmailInput" placeholder="Enter your email">
+                    </div>
+                    <button class="primary-btn" onclick="goToPasswordStep()">Next</button>
+                </div>
+
+                <div id="step-password" class="hidden">
+                    <div class="input-group">
+                        <label>Password</label>
+                        <input type="password" id="loginPassInput" placeholder="Enter password">
+                    </div>
+                    <button class="primary-btn" onclick="completeAuth()">Verify & Login</button>
+                    <button class="back-link" onclick="backToEmail()">Back to Email</button>
+                </div>
+            </div>
+
+            <div id="signupForm" class="auth-content hidden">
+                <h2>Sign Up</h2>
+                <p class="switch-text">Already have an account? <a href="#" onclick="showLogin()">Login here</a></p>
+                <div class="input-group">
+                    <label>Email Address</label>
+                    <input type="email" id="signupEmail" placeholder="Enter email">
+                </div>
+                <div class="input-group">
+                    <label>Create Password</label>
+                    <input type="password" id="signupPass" placeholder="Create password">
+                </div>
+                <button class="primary-btn" onclick="completeAuth()">Sign Up</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
